@@ -122,4 +122,28 @@ for x, y in Brent_Books.items():
   print(x, y)
 Brent_Books['Night Angle Series']['Year']=2008
 print(Brent_Books['Night Angle Series'])
-
+#assignment
+height=['6ft 2in','5ft 2in','5ft 11in']#a variable with multiple values
+print(height)
+#python data types video
+name='Python Course'
+print(name)
+print(type(name))
+#Boolean data type video
+answer = True
+print(type(answer))
+answer = False
+print(type(answer))
+math1 = 365
+math2 = 366
+if math1 > math2:
+        print('365 is greater than 366')
+else:
+        print('365 is not greater than 366')
+me=20
+you=19
+if me > you:
+        print(bool(''))#Returning false on purpose
+else:
+        print(True)
+#Thank you tech academy for making this so fun to learn!!!
