@@ -12,7 +12,7 @@ def start(nice=0,mean=0,name=''):
     #get user's name
     name = describe_game(name)
     nice,mean,name = nice_mean(nice,mean,name)
-
+    
 def describe_game(name):
     """
         check if this is a new game or not.
@@ -37,19 +37,65 @@ def describe_game(name):
     return name
 
 def nice_mean(nice,mean,name):
-    stop = True
-    while stop:
-        show_score(nice,mean,name)
-        pick = input("\nA Big man walks up to you \nand asks the time. \nWill you be nice or mean? (N/M) \n>>>: ").lower()
-        if pick == "n":
-            print("\nThey thank you and walk away smiling...")
-            nice = (nice + 1)
-            stop = False
-        if pick == "m":
-            print("\nThey glare at you and says they will see you later \nthen stroms off...")
-            mean = (mean + 1)
-            stop = False
-    score(nice,mean,name)   # pass the 3 variables to the score()
+           #question 1
+            show_score(nice,mean,name)
+            pick = input("\nA Big man walks up to you \nand asks the time. \nWill you be nice or mean? (N/M) \n>>>: ").lower()
+            if pick == "n":
+                print("\nThey thank you and walk away smiling...")
+                nice = (nice + 1)
+                
+                show_score(nice,mean,name)
+            if pick == "m":
+                print("\nThey glare at you and says they will see you later \nthen storms off...")
+                mean = (mean + 1)
+               
+                
+                show_score(nice,mean,name)
+            #question 2
+            pick = input("\nA Dog walks up to you \nand asks where the nearest fire hydrant is. \nWill you be nice or mean? (N/M) \n>>>: ").lower()
+            if pick == "n":
+                print("\nIt thanks you and walk away smiling...")
+                nice = (nice + 1)
+                
+                show_score(nice,mean,name)
+            if pick == "m":
+                print("\nIt glare at you and nips your ankle \nthen storms off...")
+                mean = (mean + 1)
+               
+                
+                show_score(nice,mean,name)
+            #question 3
+            pick = input("\nA werewolf walks up to you \nand asks where a good stake house is. \nWill you be nice or mean? (N/M) \n>>>: ").lower()
+            if pick == "n":
+                print("\It thanks you and offer you to go along...")
+                nice = (nice + 1)
+                
+                show_score(nice,mean,name)                
+            if pick == "m":
+                print("\nWhile walking away backwards \nit tells you maybe youll \nbe the stake house...")
+                mean = (mean + 1)
+               
+                
+                show_score(nice,mean,name)
+            #question 4
+            pick = input("\nA vampire up to you \nand asks where the nearest hotel is \nas its almost sunup. \nWill you be nice or mean? (N/M) \n>>>: ").lower()
+            if pick == "n":
+                print("\nIt thanks you smiling \nthen vanishes in a cloud of smoke...")
+                nice = (nice + 1)
+                
+                show_score(nice,mean,name)
+            if pick == "m":
+                print("\nIt hypnotizes you and makes you \npunch yourself in the stomach \nthen turns into a bat and poops on your head...")
+                mean = (mean + 1)
+
+                show_score(nice,mean,name)
+            score(nice,mean,name)   # pass the 3 variables to the score()
+
+
+
+            
+   
+
 
 def show_score(nice,mean,name):
     print('\n{}, your current total: \n({}, Nice) and ({}, Mean)'.format(name,nice,mean))
@@ -62,6 +108,7 @@ def score(nice,mean,name):
         lose(nice,mean,name)
     else:        # else, call nice_mean function passing in the variables so it can use them
         nice_mean(nice,mean,name)
+        
 
 def win(nice,mean,name):
     # substitue the {} wildcard with our own variable values
